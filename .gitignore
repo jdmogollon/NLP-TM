@@ -1,0 +1,24 @@
+dataset=()
+
+def leer_dataset(nombre_archivo):
+	dataset=()
+	source_file=open("/MC.txt","r")
+	for linea  in source_file.readlines():
+		posicion_primer_tabl=linea.find("\t")
+		posicion_segundo_tab=linea.find("\t", posicion_primer_tab+1)
+		
+	
+		palabra1=linea[0:posicion_primer_tab]
+		palabra2=linea[posicion_primer_Tab+1:posicion_segundo_tab]
+		gold_standard=linea(posicion_segundo_tab+1:-1)
+		gold_standard=float(gold_standard)
+		dataset[(palabra1,palabra2)]=gold_standard
+	return dataset
+
+
+dataset1= leer_dataset("./en/MG.txt")
+print len(dataset1),dataset1
+
+dataset2=leer_dataset("./en/MG.txt")
+print len(dataset2),dataset2
+	
