@@ -1,0 +1,11 @@
+
+
+
+
+import nltk
+from nltk.corpus import  wordnet as wn
+print wn.synsets('dog')
+
+from nltk.stem.porter import *
+stemmer=PorterStemmer()
+print stemmer.stem('dogs')
